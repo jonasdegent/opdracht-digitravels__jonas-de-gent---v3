@@ -1,0 +1,20 @@
+$color-green: hsl(170, 99.8%, 26%);
+$color-grey-ish: hsl(31, 50%, 95%);
+$color-purple: hsl(261, 61.2%, 14.3%);
+$border-radius: 15px;
+$box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+
+$hero-gradient: linear-gradient(
+  hsla(45, 100%, 50%, 0.8),
+  hsla(31, 99.8%, 42.8%, 0.8),
+  hsla(348, 99.8%, 47.1%, 0.8)
+);
+@mixin last-spot-images {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-width: 260px;
+  max-width: 600px;
+}

@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&display=swap&text=DigitravelsReizenvoornerdlanders");
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+ul,
+li {
+  text-decoration: none;
+}
+
+.hero {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 191, 0, 0.8)), color-stop(rgba(218, 113, 0, 0.8)), to(rgba(240, 0, 48, 0.8))), url("/img/hero.jpg");
+  background-image: linear-gradient(rgba(255, 191, 0, 0.8), rgba(218, 113, 0, 0.8), rgba(240, 0, 48, 0.8)), url("/img/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-height: 85vh;
+}
+
+.hero-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  padding: 6em 4em;
+  font-family: Carter One;
+}
+
+.hero-container__illustration {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-container__title {
+  font-size: 3em;
+  padding-top: 0.5em;
+}
+
+.hero-container__description {
+  font-size: 1.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  line-height: 1.4;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .hero-container__title {
+    font-size: 5em;
+  }
+  .hero-container__description {
+    font-size: 2em;
+  }
+}
+
+.last-spots {
+  background-color: #f9f2ec;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 2em;
+}
+
+.last-spots__title {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.spot-card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin: 1em;
+}
+
+.spot-card-container__visual {
+  border-radius: 15px 15px 0 0;
+  min-width: 260px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.spot-card-container__name {
+  padding: 1em;
+  font-weight: 700;
+}
+/*# sourceMappingURL=main.css.map */
