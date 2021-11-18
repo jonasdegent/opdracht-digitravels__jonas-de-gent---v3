@@ -1,26 +1,57 @@
-@import "_variables.scss";
-
-// .location-item-athene {
-//   background-image: url("/img/lochawe-scotland.jpg");
-// }
-
-// .location-item-athene {
-//   background-image: url("/img/porto.jpg");
-// }
+@mixin props-top-images {
+  background-size: cover;
+  background-position: 50%;
+  height: 100%;
+  border-radius: 15px 15px 0 0;
+}
 
 #location-item {
   &__athene {
     background-image: url("/img/athene.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    min-width: 300;
-    max-width: 600;
-    height: 450px;
+    @include props-top-images;
   }
   &__bali {
-    background-image: url("/img/bali.jpg");
+    background-image: url("/img/bali-1.jpg");
+    @include props-top-images;
+  }
+  &__barcelona {
+    background-image: url("/img/barcelona.jpg");
+    @include props-top-images;
+  }
+  &__budapest {
+    background-image: url("/img/budapest.jpg");
+    @include props-top-images;
+  }
+  &__dublin {
+    background-image: url("/img/dublin.jpg");
+    @include props-top-images;
+  }
+  &__dubrovnik {
+    background-image: url("/img/dubrovnik.jpg");
+    @include props-top-images;
+  }
+  &__edinburgh {
+    background-image: url("/img/edinburgh.jpg");
+    @include props-top-images;
+  }
+  &__garda-italia {
+    background-image: url("/img/garda-italia.jpg");
+    @include props-top-images;
+  }
+  &__manarola-italia {
+    background-image: url("/img/manarola-italie.jpg");
+    @include props-top-images;
+  }
+  &__paris {
+    background-image: url("/img/paris.jpg");
+    @include props-top-images;
+  }
+  &__san-francisco {
+    background-image: url("/img/san-francisco.jpg");
+    @include props-top-images;
+  }
+  &__sultanahmet {
+    background-image: url("/img/sultanahmet-turkey.jpg");
+    @include props-top-images;
   }
 }
