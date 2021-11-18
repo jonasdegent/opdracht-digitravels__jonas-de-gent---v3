@@ -139,7 +139,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 2em;
-  p {
+  h4 {
     font-size: 3em;
     font-weight: 700;
   }
@@ -147,5 +147,37 @@
     font-size: 6em;
     color: white;
     align-self: flex-end;
+  }
+}
+
+.footer {
+  background-color: $color-purple;
+  color: white;
+  @include flex-col;
+  align-items: center;
+  padding: 2em;
+
+  &__creator {
+    font-weight: 700;
+  }
+
+  p {
+    padding: 1em;
+    &:not(:last-child) {
+      border-bottom: 1px;
+      border-style: dashed;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    p {
+      border-style: none;
+      &:not(:last-child) {
+        border-style: none;
+      }
+    }
   }
 }
