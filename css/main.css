@@ -33,6 +33,22 @@ li {
   text-decoration: none;
 }
 
+#location-item__athene {
+  background-image: url("/img/athene.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  min-width: 300;
+  max-width: 600;
+  height: 450px;
+}
+
+#location-item__bali {
+  background-image: url("/img/bali.jpg");
+}
+
 .hero {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 191, 0, 0.8)), color-stop(rgba(218, 113, 0, 0.8)), to(rgba(240, 0, 48, 0.8))), url("/img/hero.jpg");
   background-image: linear-gradient(rgba(255, 191, 0, 0.8), rgba(218, 113, 0, 0.8), rgba(240, 0, 48, 0.8)), url("/img/hero.jpg");
@@ -46,13 +62,13 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: white;
   padding: 6em 4em;
   font-family: Carter One;
@@ -100,7 +116,8 @@ li {
   padding-top: 2em;
 }
 
-.last-spots__title {
+.last-spots__title,
+.top-locations__title {
   font-size: 2em;
   font-weight: 700;
 }
@@ -129,6 +146,40 @@ li {
 
 .spot-card-container__name {
   padding: 1em;
+  font-weight: 700;
+}
+
+.top-locations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.location-item-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin: 1em;
+}
+
+.location-item-container__name {
+  background-color: white;
+  padding: 1.5em 1em;
   font-weight: 700;
 }
 /*# sourceMappingURL=main.css.map */

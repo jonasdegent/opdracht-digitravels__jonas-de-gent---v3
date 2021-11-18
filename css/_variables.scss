@@ -11,10 +11,14 @@ $hero-gradient: linear-gradient(
   hsla(31, 99.8%, 42.8%, 0.8),
   hsla(348, 99.8%, 47.1%, 0.8)
 );
-@mixin last-spot-images {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-width: 260px;
-  max-width: 600px;
+// @mixin last-spot-images {
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
+//   min-width: 260px;
+//   max-width: 600px;
+// }
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
 }

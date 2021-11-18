@@ -1,11 +1,26 @@
 @import "_variables.scss";
 
-// .spot-card__container-schotland {
+// .location-item-athene {
 //   background-image: url("/img/lochawe-scotland.jpg");
-//   @include last-spot-images;
 // }
 
-// .spot-card__container-portugal {
+// .location-item-athene {
 //   background-image: url("/img/porto.jpg");
-//   @include last-spot-images;
 // }
+
+#location-item {
+  &__athene {
+    background-image: url("/img/athene.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    min-width: 300;
+    max-width: 600;
+    height: 450px;
+  }
+  &__bali {
+    background-image: url("/img/bali.jpg");
+  }
+}

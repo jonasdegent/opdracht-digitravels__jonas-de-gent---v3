@@ -12,9 +12,8 @@
 }
 
 .hero-container {
-  display: flex;
+  @include flex-col;
   align-items: center;
-  flex-direction: column;
 
   color: white;
   padding: 6em 4em;
@@ -40,21 +39,25 @@
 }
 
 @media (min-width: 600px) {
-  .hero-container__title {
-    font-size: 5em;
-  }
-  .hero-container__description {
-    font-size: 2em;
+  .hero-container {
+    &__title {
+      font-size: 5em;
+    }
+    &__description {
+      font-size: 2em;
+    }
   }
 }
 
 .last-spots {
   background-color: $color-grey-ish;
-  display: flex;
-  flex-direction: column;
+  @include flex-col;
   align-items: center;
   padding-top: 2em;
+}
 
+.last-spots,
+.top-locations {
   &__title {
     font-size: 2em;
     font-weight: 700;
@@ -62,8 +65,7 @@
 }
 
 .spot-card-container {
-  display: flex;
-  flex-direction: column;
+  @include flex-col;
   background-color: white;
   border-radius: 15px;
   box-shadow: $box-shadow;
@@ -77,6 +79,25 @@
   }
   &__name {
     padding: 1em;
+    font-weight: 700;
+  }
+}
+
+.top-locations {
+  @include flex-col;
+  align-items: center;
+}
+
+.location-item-container {
+  @include flex-col;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: $box-shadow;
+  margin: 1em;
+
+  &__name {
+    background-color: white;
+    padding: 1.5em 1em;
     font-weight: 700;
   }
 }
