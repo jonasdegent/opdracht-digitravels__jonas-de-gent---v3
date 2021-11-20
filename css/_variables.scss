@@ -1,9 +1,11 @@
+$color-white: rgba(white, 0.98);
 $color-green: hsl(170, 99.8%, 26%);
 $color-grey-ish: hsl(31, 50%, 95%);
 $color-purple: hsl(261, 61.2%, 14.3%);
 $border-radius: 15px;
 $box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
   0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$box-shadow-spot: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 $text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 
 $hero-gradient: linear-gradient(

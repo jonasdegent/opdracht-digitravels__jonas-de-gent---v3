@@ -14,19 +14,15 @@
 </head>
 <body>
   <header class="header">
-    <div class="header__container">
+    <div class="header-container">
       <span class="header__logo">Digitravels</span>
-      <button class="main-nav__button mobile">
-        <i class="fas fa-bars"></i>
-      </button>
+      <button class="header__button"><i class="fa fa-bars"></i></button>
     </div>
-    <nav class="main-nav">      
-      <ul class="main-nav__links">
-        <li class="main-nav__link"><a href="#">Laatste plaatsen</a></li>
-        <li class="main-nav__link"><a href="#">Onze top locaties</a></li>
-        <li class="main-nav__link"><a href="#">In the spotlight</a></li>
-      </ul>
-    </nav>
+      <nav class="main-nav">      
+        <a class="main-nav__link" href="#last-spots">Laatste plaatsen</a>
+        <a class="main-nav__link" href="#top-locations">Onze top locaties</a>
+        <a class="main-nav__link" href="#">In the spotlight</a>
+      </nav>
   </header>
   <main>
     <section class="hero">
@@ -40,7 +36,7 @@
         </h2>
       </div>
     </section>
-    <section class="last-spots">
+    <section class="last-spots" id="last-spots">
       <h3 class="last-spots__title">Laatste plaatsen</h3>
       <div class="last-spots-list">
         <article class="spot-card-container">
@@ -57,57 +53,78 @@
         </article>
       </div>
     </section>
-    <section class="top-locations">
+    <section class="top-locations" id="top-locations">
       <h3 class="top-locations__title">Onze top locaties</h3>
       <div class="top-locations-list">
-        <article class=location-item-container>
+        <article class="location-item-container">
           <div id="location-item__athene"></div>
           <h4 class="location-item-container__name">ATHENE, GRIEKENLAND</h4>
         </article>
-        <article class=location-item-container>
+        <article class="location-item-container">
           <div id="location-item__bali"></div>
           <h4 class="location-item-container__name">BALI, INDONESIË</h4>
         </article>
-        <article class=location-item-container>
+        <article class="location-item-container">
           <div id="location-item__barcelona"></div>
           <h4 class="location-item-container__name">BARCELONA, SPANJE</h4>
         </article>
-        <article class=location-item-container>
+        <article class="location-item-container">
           <div id="location-item__budapest"></div>
           <h4 class="location-item-container__name">BOEDAPEST, HONGARIJE</h4>
         </article>
-        <article class=location-item-container>
+        <article class="location-item-container">
           <div id="location-item__dublin"></div>
           <h4 class="location-item-container__name">DUBLIN, IERLAND</h4>
         </article>
-        <article class=location-item-container>
+        <article class="location-item-container">
           <div id="location-item__dubrovnik"></div>
           <h4 class="location-item-container__name">DUBROVNIK, KROATIË</h4>
         </article>
-        <article class=location-item-container>
+        <article class="location-item-container">
           <div id="location-item__edinburgh"></div>
           <h4 class="location-item-container__name">EDINBRUGH, SCHOTLAND</h4>
         </article>
-        <article class=location-item-container>
+        <article class="location-item-container">
           <div id="location-item__garda-italia"></div>
           <h4 class="location-item-container__name">GARDAMEER, ITALIË</h4>
         </article>
-        <article class=location-item-container>
+        <article class="location-item-container">
           <div id="location-item__manarola-italia"></div>
           <h4 class="location-item-container__name">MANAROLA, ITALIË</h4>
         </article>
-        <article class=location-item-container>
+        <article class="location-item-container">
           <div id="location-item__paris"></div>
           <h4 class="location-item-container__name">PARIJS, FRANKRIJK</h4>
         </article>
-        <article class=location-item-container>
+        <article class="location-item-container">
           <div id="location-item__san-francisco"></div>
           <h4 class="location-item-container__name">SAN FRANCISCO, VERENIGDE STATEN</h4>
         </article>
-        <article class=location-item-container id="location-item__more">
+        <article class="location-item-container" id="location-item__more">
             <h4>Bekijk andere locaties</h4>
             <i class="fas fa-arrow-right"></i>
         </article>
+      </div>
+    </section>
+    <section class="spotlight" id="spotlight">
+      <h3 class="spotlight__title">In de spotlight: Aalst</h3>    
+      <div class="spotlight-container">
+        <div class="spotlight-container__inner">
+          <h2 class="spotlight-container__title">SCHOTTE</h2>
+          <p class="spotlight-container__description">Sportcentrum<p>
+        </div>
+      </div>
+      <div class="spotlight-container utopia">
+        <div class="spotlight-container__inner">
+          <h2 class="spotlight-container__title">UTOPIA</h2>
+          <p class="spotlight-container__description">Bibliotheek<p>
+        </div>
+      </div>
+      <div class="spotlight-container murphys">
+        <div class="spotlight-container__inner">
+          <h2 class="spotlight-container__title">MURPHY'S BURGERS</h2>
+          <p class="spotlight-container__description">Hambugertent<p>
+        </div>
       </div>
     </section>
   </main>

@@ -3,6 +3,55 @@
 @import "_images";
 @import url("https://fonts.googleapis.com/css2?family=Carter+One&display=swap&text=DigitravelsReizenvoornerdlanders"); //Font voor titel
 
+.header {
+  height: 70px;
+  position: fixed;
+  background-color: $color-white;
+  width: 100%;
+  padding-left: 2em;
+  padding-right: 2em;
+
+  @media (min-width: 1200px) {
+    padding-left: 6em;
+    padding-right: 6em;
+  }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    font-weight: 700;
+    font-size: 2em;
+    color: $color-purple;
+  }
+  &__button {
+    font-size: 1.5em;
+    @media (min-width: 800px) {
+      display: none;
+    }
+  }
+}
+
+.main-nav {
+  @media (max-width: 800px) {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: $color-white;
+  }
+
+  &__link {
+    font-weight: 700;
+    color: $color-purple;
+
+    &:not(:last-child) {
+      padding-right: 0.5em;
+    }
+  }
+}
+
 .hero {
   background-image: $hero-gradient, url("/img/hero.jpg");
   background-repeat: no-repeat;
@@ -76,7 +125,8 @@
 }
 
 .last-spots,
-.top-locations {
+.top-locations,
+.spotlight {
   &__title {
     font-size: 2em;
     font-weight: 700;
@@ -150,6 +200,53 @@
   }
 }
 
+.spotlight {
+  background-color: $color-grey-ish;
+  border-radius: $border-radius;
+  margin: 2em;
+  @include flex-col;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3em;
+}
+
+.spotlight-container {
+  height: 300px;
+  width: 50%;
+  padding: 2em;
+  display: flex;
+  align-items: flex-end;
+  background-image: url("/img/aalst-schotte.jpg");
+  background-size: cover;
+  background-position: 50%;
+  margin: 1em;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow-spot;
+
+  &__inner {
+    @include flex-col;
+    justify-content: flex-start;
+    align-items: center;
+    background: white;
+    box-shadow: $box-shadow-spot;
+    padding: 2em;
+  }
+  &__title {
+    font-weight: 700;
+  }
+  &__description {
+    padding-top: 0.25em;
+    line-height: 1;
+  }
+}
+
+.utopia {
+  background-image: url("/img/aalst-utopia.jpg");
+}
+.murphys {
+  background-image: url("/img/aalst-murphys.jpg");
+}
+
 .footer {
   background-color: $color-purple;
   color: white;
@@ -164,8 +261,7 @@
   p {
     padding: 1em;
     &:not(:last-child) {
-      border-bottom: 1px;
-      border-style: dashed;
+      border-bottom: 1px dashed white;
     }
   }
 
@@ -174,9 +270,10 @@
     flex-direction: row;
     justify-content: center;
     p {
-      border-style: none;
+      padding: 1em;
       &:not(:last-child) {
         border-style: none;
+        border-right: 1px solid white;
       }
     }
   }
