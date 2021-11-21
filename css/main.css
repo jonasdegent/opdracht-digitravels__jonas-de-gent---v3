@@ -132,6 +132,34 @@ li {
   border-radius: 15px 15px 0 0;
 }
 
+.schotte {
+  background-image: url("/img/aalst-schotte.jpg");
+  background-size: cover;
+  border-radius: 15px;
+  background-position: 50%;
+}
+
+.utopia {
+  background-image: url("/img/aalst-utopia.jpg");
+  background-size: cover;
+  border-radius: 15px;
+  background-position: 50%;
+}
+
+.murphys {
+  background-image: url("/img/aalst-murphys.jpg");
+  background-size: cover;
+  border-radius: 15px;
+  background-position: 50%;
+}
+
+.aquatopia {
+  background-image: url("/img/aalst-aquatopia.jpg");
+  background-size: cover;
+  border-radius: 15px;
+  background-position: 50%;
+}
+
 .header {
   height: 70px;
   position: fixed;
@@ -432,45 +460,36 @@ li {
 }
 
 .spotlight {
+  text-align: center;
   background-color: #f9f2ec;
-  border-radius: 15px;
-  margin: 2em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 3em;
+  padding-top: 2em;
 }
 
-.spotlight-container {
-  height: 300px;
-  width: 50%;
-  padding: 2em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  background-image: url("/img/aalst-schotte.jpg");
-  background-size: cover;
-  background-position: 50%;
+.spotlight-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 350px;
+  grid-auto-columns: minmax(320px, auto);
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
   margin: 1em;
+  border-radius: 15px;
+}
+
+@media (max-width: 600px) {
+  .spotlight-wrapper {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.spotlight-item {
+  background-size: cover;
   border-radius: 15px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.spotlight-container__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -478,33 +497,26 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column-reverse;
+}
+
+.spotlight-item__inner {
   background: white;
   -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  padding: 2em;
+  padding: 1em;
+  border-radius: 0 15px 0px 15px;
+  width: 50%;
+  margin: 1em;
 }
 
-.spotlight-container__title {
+.spotlight-item__title {
   font-weight: 700;
 }
 
-.spotlight-container__description {
+.spotlight-item__description {
   padding-top: 0.25em;
-  line-height: 1;
-}
-
-.utopia {
-  background-image: url("/img/aalst-utopia.jpg");
-}
-
-.murphys {
-  background-image: url("/img/aalst-murphys.jpg");
+  line-height: 1.2;
 }
 
 .footer {

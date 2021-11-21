@@ -5,6 +5,12 @@
   border-radius: 15px 15px 0 0;
 }
 
+@mixin props-spot-images {
+  background-size: cover;
+  border-radius: $border-radius;
+  background-position: 50%;
+}
+
 #location-item {
   &__athene {
     background-image: url("/img/athene.jpg");
@@ -54,4 +60,22 @@
     background-image: url("/img/sultanahmet-turkey.jpg");
     @include props-top-images;
   }
+}
+
+.schotte {
+  background-image: url("/img/aalst-schotte.jpg");
+  @include props-spot-images;
+}
+
+.utopia {
+  background-image: url("/img/aalst-utopia.jpg");
+  @include props-spot-images;
+}
+.murphys {
+  background-image: url("/img/aalst-murphys.jpg");
+  @include props-spot-images;
+}
+.aquatopia {
+  background-image: url("/img/aalst-aquatopia.jpg");
+  @include props-spot-images;
 }

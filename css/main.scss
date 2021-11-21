@@ -201,50 +201,48 @@
 }
 
 .spotlight {
+  text-align: center;
   background-color: $color-grey-ish;
-  border-radius: $border-radius;
-  margin: 2em;
-  @include flex-col;
-  justify-content: center;
-  align-items: center;
-  padding-top: 3em;
+  padding-top: 2em;
 }
 
-.spotlight-container {
-  height: 300px;
-  width: 50%;
-  padding: 2em;
-  display: flex;
-  align-items: flex-end;
-  background-image: url("/img/aalst-schotte.jpg");
-  background-size: cover;
-  background-position: 50%;
+.spotlight-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 350px;
+  grid-auto-columns: minmax(320px, auto);
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
   margin: 1em;
   border-radius: $border-radius;
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.spotlight-item {
+  background-size: cover;
+  border-radius: $border-radius;
   box-shadow: $box-shadow-spot;
+  @include flex-col;
+  flex-direction: column-reverse;
 
   &__inner {
-    @include flex-col;
-    justify-content: flex-start;
-    align-items: center;
     background: white;
     box-shadow: $box-shadow-spot;
-    padding: 2em;
+    padding: 1em;
+    border-radius: 0 15px 0px 15px;
+    width: 50%;
+    margin: 1em;
   }
   &__title {
     font-weight: 700;
   }
   &__description {
     padding-top: 0.25em;
-    line-height: 1;
+    line-height: 1.2;
   }
-}
-
-.utopia {
-  background-image: url("/img/aalst-utopia.jpg");
-}
-.murphys {
-  background-image: url("/img/aalst-murphys.jpg");
 }
 
 .footer {
