@@ -511,6 +511,11 @@ li {
   margin: 1em;
 }
 
+.spotlight-item__inner a {
+  text-decoration: none;
+  color: #1e0e3b;
+}
+
 .spotlight-item__title {
   font-weight: 700;
 }

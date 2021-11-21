@@ -236,6 +236,10 @@
     border-radius: 0 15px 0px 15px;
     width: 50%;
     margin: 1em;
+    a {
+      text-decoration: none;
+      color: $color-purple;
+    }
   }
   &__title {
     font-weight: 700;
