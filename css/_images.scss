@@ -11,71 +11,60 @@
   background-position: 50%;
 }
 
-#location-item {
-  &__athene {
+.location-item {
+  @include props-top-images;
+
+  &--athene {
     background-image: url("/img/athene.jpg");
-    @include props-top-images;
   }
-  &__bali {
+  &--bali {
     background-image: url("/img/bali-1.jpg");
-    @include props-top-images;
   }
-  &__barcelona {
+  &--barcelona {
     background-image: url("/img/barcelona.jpg");
-    @include props-top-images;
   }
-  &__budapest {
+  &--budapest {
     background-image: url("/img/budapest.jpg");
-    @include props-top-images;
   }
-  &__dublin {
+  &--dublin {
     background-image: url("/img/dublin.jpg");
-    @include props-top-images;
   }
-  &__dubrovnik {
+  &--dubrovnik {
     background-image: url("/img/dubrovnik.jpg");
-    @include props-top-images;
   }
-  &__edinburgh {
+  &--edinburgh {
     background-image: url("/img/edinburgh.jpg");
-    @include props-top-images;
   }
-  &__garda-italia {
+  &--garda-italia {
     background-image: url("/img/garda-italia.jpg");
-    @include props-top-images;
   }
-  &__manarola-italia {
+  &--manarola-italia {
     background-image: url("/img/manarola-italie.jpg");
-    @include props-top-images;
   }
-  &__paris {
+  &--paris {
     background-image: url("/img/paris.jpg");
-    @include props-top-images;
   }
-  &__san-francisco {
+  &--san-francisco {
     background-image: url("/img/san-francisco.jpg");
-    @include props-top-images;
   }
-  &__sultanahmet {
-    background-image: url("/img/sultanahmet-turkey.jpg");
-    @include props-top-images;
-  }
+  // &--sultanahmet {
+  //   background-image: url("/img/sultanahmet-turkey.jpg");
+  // }
 }
 
-.schotte {
-  background-image: url("/img/aalst-schotte.jpg");
+.spotlight-item {
   @include props-spot-images;
-}
+  &--schotte {
+    background-image: url("/img/aalst-schotte.jpg");
+  }
 
-.utopia {
-  background-image: url("/img/aalst-utopia.jpg");
-  @include props-spot-images;
-}
-.murphys {
-  background-image: url("/img/aalst-murphys.jpg");
-  @include props-spot-images;
-}
-.aquatopia {
-  background-image: url("/img/aalst-aquatopia.jpg");
-  @include props-spot-images;
+  &--utopia {
+    background-image: url("/img/aalst-utopia.jpg");
+  }
+  &--murphys {
+    background-image: url("/img/aalst-murphys.jpg");
+  }
+  &--aquatopia {
+    background-image: url("/img/aalst-aquatopia.jpg");
+  }
 }

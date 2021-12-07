@@ -7,12 +7,30 @@ $box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
   0 2px 4px -1px rgba(0, 0, 0, 0.06);
 $box-shadow-spot: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 $text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+$max-width: 2000px;
 
 $hero-gradient: linear-gradient(
   hsla(45, 100%, 50%, 0.8),
   hsla(31, 99.8%, 42.8%, 0.8),
   hsla(348, 99.8%, 47.1%, 0.8)
 );
+
+@mixin preserve-width {
+  &__container,
+  &__list,
+  &__wrapper {
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+}
+
+@mixin title {
+  &__title {
+    font-size: 2em;
+    font-weight: 700;
+  }
+}
 
 @mixin flex-col {
   display: flex;
@@ -23,4 +41,10 @@ $hero-gradient: linear-gradient(
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

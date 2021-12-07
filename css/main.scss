@@ -10,21 +10,26 @@
   width: 100%;
   padding-left: 2em;
   padding-right: 2em;
-
+  @include preserve-width;
+  @include flex-between;
   @media (min-width: 1200px) {
     padding-left: 6em;
     padding-right: 6em;
   }
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  &__container {
+    @include flex-between;
+    position: relative;
+    width: 100%;
+    display: flex;
+  }
 
   &__logo {
     font-weight: 700;
     font-size: 2em;
     color: $color-purple;
   }
+
   &__button {
     font-size: 1.5em;
     @media (min-width: 800px) {
@@ -34,20 +39,31 @@
 }
 
 .main-nav {
-  @media (max-width: 800px) {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    background-color: $color-white;
-  }
-
   &__link {
     font-weight: 700;
     color: $color-purple;
+    padding: 1em;
 
     &:not(:last-child) {
       padding-right: 0.5em;
+      border-bottom: 1px solid $color-grey-ish;
+    }
+  }
+
+  @media (max-width: 800px) {
+    position: absolute;
+    @include flex-col;
+    justify-content: space-between;
+    border-radius: 0 0 15px 15px;
+    box-shadow: $box-shadow;
+    top: 50px;
+    right: 0;
+    background-color: $color-white;
+
+    &__link {
+      &:not(:last-child) {
+        border-bottom: 1px solid $color-grey-ish;
+      }
     }
   }
 }
@@ -58,41 +74,42 @@
   background-size: cover;
   background-position: center;
   max-height: 85vh;
-}
+  @include preserve-width;
 
-.hero-container {
-  @include flex-col;
-  align-items: center;
-
-  color: white;
-  padding: 6em 4em;
-
-  font-family: Carter One;
+  &__container {
+    @include flex-col;
+    align-items: center;
+    color: white;
+    padding: 6em 4em;
+    font-family: "Carter One", Helvetica, sans-serif;
+  }
 
   &__illustration {
     max-width: 100%;
-    height: auto;
+    min-width: 200px;
+    @media (min-width: 600px) {
+      min-width: 400px;
+    }
   }
 
   &__title {
     font-size: 3em;
     padding-top: 0.5em;
   }
+
   &__description {
     font-size: 1.5em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    padding: 0.5em 0;
     line-height: 1.4;
     text-align: center;
   }
+
   &__title,
   &__description {
     text-shadow: $text-shadow;
   }
-}
 
-@media (min-width: 600px) {
-  .hero-container {
+  @media (min-width: 600px) {
     &__title {
       font-size: 5em;
     }
@@ -102,35 +119,30 @@
   }
 }
 
-.last-spots-list {
+.last-spots,
+.top-locations {
+  @include preserve-width;
   @include flex-col;
-  @media (min-width: 1100px) {
-    @include flex-row;
-  }
-}
-
-.top-locations-list {
-  @include flex-col;
-  @media (min-width: 1100px) {
-    @include flex-row;
-    flex-wrap: wrap;
+  align-items: center;
+  padding-top: 3em;
+  &__list {
+    @include flex-col;
+    align-items: center;
+    margin-bottom: 4em;
+    @media (min-width: 1100px) {
+      @include flex-row;
+    }
   }
 }
 
 .last-spots {
   background-color: $color-grey-ish;
-  @include flex-col;
-  align-items: center;
-  padding-top: 3em;
 }
 
 .last-spots,
 .top-locations,
 .spotlight {
-  &__title {
-    font-size: 2em;
-    font-weight: 700;
-  }
+  @include title;
 }
 
 .spot-card-container {
@@ -153,27 +165,51 @@
 }
 
 .top-locations {
-  @include flex-col;
-  align-items: center;
-  padding-top: 3em;
   margin: 1em;
+  &__list {
+    @media (min-width: 1100px) {
+      flex-wrap: wrap;
+    }
+  }
 }
 
-.location-item-container {
-  @include flex-col;
+.location-item {
+  display: flex;
+  flex-direction: column-reverse;
   border-radius: 15px;
   box-shadow: $box-shadow;
   width: 100%;
   height: 450px;
   min-width: 300px;
   max-width: 600px;
+  flex-basis: 400px;
+  flex-grow: 1;
+  flex-shrink: 1;
   margin: 1em;
 
   &__name {
     background-color: white;
     padding: 1.5em 1em;
     font-weight: 700;
-    border-radius: $border-radius;
+    border-radius: 0 0 15px 15px;
+  }
+
+  &--discover {
+    background: $hero-gradient;
+    border-radius: 15px;
+    @include flex-between;
+    flex-direction: column;
+    padding: 2em;
+    &__more {
+      font-size: 3em;
+      font-weight: 700;
+      align-self: flex-start;
+    }
+    &__icon {
+      font-size: 6em;
+      color: white;
+      align-self: flex-end;
+    }
   }
 
   @media (min-width: 1100px) {
@@ -182,43 +218,26 @@
   }
 }
 
-#location-item__more {
-  background: $hero-gradient;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2em;
-  h4 {
-    font-size: 3em;
-    font-weight: 700;
-  }
-  i {
-    font-size: 6em;
-    color: white;
-    align-self: flex-end;
-  }
-}
-
 .spotlight {
-  text-align: center;
   background-color: $color-grey-ish;
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
+  padding: 2em;
+  @include flex-col;
+  align-items: center;
+  @include preserve-width;
 
-.spotlight-wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 350px;
-  grid-auto-columns: minmax(320px, auto);
-  grid-column-gap: 0.75em;
-  grid-row-gap: 1em;
-  margin: 1em;
-  border-radius: $border-radius;
-
-  @media (max-width: 600px) {
+  &__wrapper {
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 350px;
+    grid-auto-columns: minmax(320px, auto);
+    grid-column-gap: 0.75em;
+    grid-row-gap: 1em;
+    margin: 1em;
+    border-radius: $border-radius;
+
+    @media (min-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
 
@@ -230,13 +249,14 @@
   flex-direction: column-reverse;
 
   &__inner {
+    text-align: center;
     background: white;
     box-shadow: $box-shadow-spot;
     padding: 1em;
     border-radius: 0 15px 0px 15px;
-    width: 50%;
+    width: calc(50% - 1em);
     margin: 1em;
-    a {
+    &--link {
       text-decoration: none;
       color: $color-purple;
     }

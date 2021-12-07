@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,130 +14,119 @@
 </head>
 <body>
   <header class="header">
-    <div class="header-container">
+    <div class="header__container">
       <span class="header__logo">Digitravels</span>
       <button class="header__button"><i class="fa fa-bars"></i></button>
-    </div>
       <nav class="main-nav">      
         <a class="main-nav__link" href="#last-spots">Laatste plaatsen</a>
         <a class="main-nav__link" href="#top-locations">Onze top locaties</a>
         <a class="main-nav__link" href="#spotlight">In the spotlight</a>
       </nav>
+    </div>
   </header>
   <main>
     <section class="hero">
-      <div class="hero-container">
-        <img class="hero-container__illustration" src="/img/world.png" alt="illustration of a globe with GPS markers on it">
-        <h1 class="hero-container__title">
+      <div class="hero__container">
+        <img class="hero__illustration" src="/img/world.png" alt="illustration of a globe with GPS markers on it">
+        <h1 class="hero__title">
           Digitravels
         </h1>
-        <h2 class="hero-container__description">
+        <strong class="hero__description">
           Reizen voor nerdlanders
-        </h2>
+        </strong>
       </div>
     </section>
     <section class="last-spots" id="last-spots">
-      <h3 class="last-spots__title">Laatste plaatsen</h3>
-      <div class="last-spots-list">
+      <h2 class="last-spots__title">Laatste plaatsen</h2>
+      <div class="last-spots__list">
         <article class="spot-card-container">
           <img class="spot-card-container__visual" src="/img/lochawe-scotland.jpg" alt="castle in front of autumn colored hills with a reflection of it in the water">
-          <h4 class="spot-card-container__name">LOCHAWE, SCHOTLAND</h4>
+          <h3 class="spot-card-container__name">LOCHAWE, SCHOTLAND</h3>
         </article>
         <article class="spot-card-container">
           <img class="spot-card-container__visual" src="/img/porto.jpg" alt="colorful houses in a bay with fishing boats">
-          <h4 class="spot-card-container__name">PORTO, PORTUGAL</h4>
+          <h3 class="spot-card-container__name">PORTO, PORTUGAL</h3>
         </article>
         <article class="spot-card-container">
           <img class="spot-card-container__visual" src="/img/aljezur-portugal.jpg" alt="steep cliffs by the ocean bathing in sunset colors">
-          <h4 class="spot-card-container__name">ALJEZUR, PORTUGAL</h4>
+          <h3 class="spot-card-container__name">ALJEZUR, PORTUGAL</h3>
         </article>
       </div>
     </section>
     <section class="top-locations" id="top-locations">
-      <h3 class="top-locations__title">Onze top locaties</h3>
-      <div class="top-locations-list">
-        <article class="location-item-container">
-          <div id="location-item__athene"></div>
-          <h4 class="location-item-container__name">ATHENE, GRIEKENLAND</h4>
+      <h2 class="top-locations__title">Onze top locaties</h2>
+      <div class="top-locations__list">
+        <article class="location-item location-item--athene">
+          <h3 class="location-item__name">ATHENE, GRIEKENLAND</h3>
         </article>
-        <article class="location-item-container">
-          <div id="location-item__bali"></div>
-          <h4 class="location-item-container__name">BALI, INDONESIË</h4>
+        <article class="location-item location-item--bali">
+          <h3 class="location-item__name">BALI, INDONESIË</h3>
         </article>
-        <article class="location-item-container">
-          <div id="location-item__barcelona"></div>
-          <h4 class="location-item-container__name">BARCELONA, SPANJE</h4>
+        <article class="location-item location-item--barcelona">
+          <h3 class="location-item__name">BARCELONA, SPANJE</h3>
         </article>
-        <article class="location-item-container">
-          <div id="location-item__budapest"></div>
-          <h4 class="location-item-container__name">BOEDAPEST, HONGARIJE</h4>
+        <article class="location-item location-item--budapest">
+          <h3 class="location-item__name">BOEDAPEST, HONGARIJE</h3>
         </article>
-        <article class="location-item-container">
-          <div id="location-item__dublin"></div>
-          <h4 class="location-item-container__name">DUBLIN, IERLAND</h4>
+        <article class="location-item location-item--dublin">
+          <h3 class="location-item__name">DUBLIN, IERLAND</h3>
         </article>
-        <article class="location-item-container">
-          <div id="location-item__dubrovnik"></div>
-          <h4 class="location-item-container__name">DUBROVNIK, KROATIË</h4>
+        <article class="location-item location-item--dubrovnik">
+          <h3 class="location-item__name">DUBROVNIK, KROATIË</h3>
         </article>
-        <article class="location-item-container">
-          <div id="location-item__edinburgh"></div>
-          <h4 class="location-item-container__name">EDINBRUGH, SCHOTLAND</h4>
+        <article class="location-item location-item--edinburgh">
+          <h3 class="location-item__name">EDINBRUGH, SCHOTLAND</h3>
         </article>
-        <article class="location-item-container">
-          <div id="location-item__garda-italia"></div>
-          <h4 class="location-item-container__name">GARDAMEER, ITALIË</h4>
+        <article class="location-item location-item--garda-italia">
+          <h3 class="location-item__name">GARDAMEER, ITALIË</h3>
         </article>
-        <article class="location-item-container">
-          <div id="location-item__manarola-italia"></div>
-          <h4 class="location-item-container__name">MANAROLA, ITALIË</h4>
+        <article class="location-item location-item--manarola-italia">
+          <h3 class="location-item__name">MANAROLA, ITALIË</h3>
         </article>
-        <article class="location-item-container">
-          <div id="location-item__paris"></div>
-          <h4 class="location-item-container__name">PARIJS, FRANKRIJK</h4>
+        <article class="location-item location-item--paris">
+          <h3 class="location-item__name">PARIJS, FRANKRIJK</h3>
         </article>
-        <article class="location-item-container">
-          <div id="location-item__san-francisco"></div>
-          <h4 class="location-item-container__name">SAN FRANCISCO, VERENIGDE STATEN</h4>
+        <article class="location-item location-item--san-francisco">
+          <h3 class="location-item__name">SAN FRANCISCO, VERENIGDE STATEN</h3>
         </article>
-        <article class="location-item-container" id="location-item__more">
-            <h4>Bekijk andere locaties</h4>
-            <i class="fas fa-arrow-right"></i>
+        <article class="location-item location-item--discover">
+            <h3 class="location-item--discover__more">Bekijk andere locaties</h3>
+            <i class="fas fa-arrow-right location-item--discover__icon"></i>
         </article>
       </div>
     </section>
     
     <section class="spotlight" id="spotlight">
-      <h3 class="spotlight__title">In de spotlight: Aalst</h3>    
-      <div class="spotlight-wrapper">
-        <div class="spotlight-item schotte">
+      <h2 class="spotlight__title">In de spotlight: Aalst</h2>    
+      <div class="spotlight__wrapper">
+        <div class="spotlight-item spotlight-item--schotte">
           <div class="spotlight-item__inner">
-            <a href="https://www.aalst.be/plaats/sportcentrum-schotte" target="_blank">
-              <h2 class="spotlight-item__title">SCHOTTE</h2>
+            <a href="https://www.aalst.be/plaats/sportcentrum-schotte" target="_blank" rel="noopener noreferrer">
+              <h3 class="spotlight-item__title">SCHOTTE</h3>
               <p class="spotlight-item__description">Sportcentrum<p>
             </a>
           </div>
         </div>
-        <div class="spotlight-item utopia">
+        <div class="spotlight-item spotlight-item--utopia">
           <div class="spotlight-item__inner">
-            <a href="https://utopia.aalst.be/" target="_blank">
-              <h2 class="spotlight-item__title">UTOPIA</h2>
+            <a href="https://utopia.aalst.be/" target="_blank" rel="noopener noreferrer" class="spotlight-item__inner--link">
+              <h3 class="spotlight-item__title">UTOPIA</h3>
               <p class="spotlight-item__description">Bibliotheek<p>
             </a>
           </div>
         </div>
-        <div class="spotlight-item murphys">
+        <div class="spotlight-item spotlight-item--murphys">
           <div class="spotlight-item__inner">
-            <a href="https://www.facebook.com/Murphysburgers/" target="_blank">
-              <h2 class="spotlight-item__title">MURPHY'S BURGERS</h2>
+            <a href="https://www.facebook.com/Murphysburgers/" target="_blank" rel="noopener noreferrer" class="spotlight-item__inner--link">
+              <h3 class="spotlight-item__title">MURPHY'S BURGERS</h3>
               <p class="spotlight-item__description">Hambugertent<p>
             </a>
           </div>
         </div>
-        <div class="spotlight-item aquatopia">
+        <div class="spotlight-item spotlight-item--aquatopia">
           <div class="spotlight-item__inner">
-            <a href="https://aalst.be/aquatopia/" target="_blank">
-              <h2 class="spotlight-item__title">AQUATOPIA</h2>
+            <a href="https://aalst.be/aquatopia/" target="_blank" rel="noopener noreferrer" class="spotlight-item__inner--link">
+              <h3 class="spotlight-item__title">AQUATOPIA</h3>
               <p class="spotlight-item__description">Splinternieuw zwembad<p>
             </a>
           </div>
